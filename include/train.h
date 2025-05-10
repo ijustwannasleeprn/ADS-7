@@ -1,11 +1,12 @@
-#ifndef TRAIN_H
-#define TRAIN_H
+// Copyright 2022 NNTU-CS
+#ifndef INCLUDE_TRAIN_H_
+#define INCLUDE_TRAIN_H_
 
 class Train {
  private:
   int operationsCount;
   struct Car {
-    bool light;         // состояние лампочки
+    bool light;
     Car* nextCar;
     Car* prevCar;
   };
@@ -13,10 +14,10 @@ class Train {
 
  public:
   Train();
-  void addCar(bool isLightOn);  // добавить вагон с начальным состоянием лампочки
-  int getLength();      // вычислить длину поезда
-  int getOpCount();     // вернуть число переходов (из вагона в вагон)
+  void addCar(bool isLightOn);
+  int getLength();
+  int getOpCount();
   ~Train();
 };
 
-#endif  // TRAIN_H
+#endif  // INCLUDE_TRAIN_H_
